@@ -259,7 +259,7 @@ const CallPage = () => {
         createGraph("brown", "myChart6");
 
         const peer = new Peer();
-        const socket = io("http://localhost:3030/");
+        const socket = io();
 
 
         function addVideoStream(stream, id) {
