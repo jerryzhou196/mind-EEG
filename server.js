@@ -20,7 +20,7 @@ const path = require('path');
 
 var cors = require('cors')
 
-const { ExpressPeerServer } = require("peerjs");
+const { ExpressPeerServer } = require("peer");
 const peerServer = ExpressPeerServer(server, {
     debug: true,
 });
