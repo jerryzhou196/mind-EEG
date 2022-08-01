@@ -1,4 +1,4 @@
-# video-eeg
+# mind-EEG 
 <strong> PROJECT IS SERVED LIVE ON <a href="https://limitless-lowlands-82699.herokuapp.com/"> HEROKU.</a> <br>
 Find a friend to share your link with, or open two browser windows to mimic a call. </strong>
 
