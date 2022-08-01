@@ -92,8 +92,8 @@ function JoinControls() {
 
             </select>
             <CallButton color={'#FF007A'} text={"let's call"} textcolor={"#D1D0C5"} href={`/callpage?room=${room}`} />
-            <CallButton color={'#FFFFFF'} text={"create account"} textcolor={"#9A9A9D"} />
-            <a href="/" style={{ width: "100%", color: "#FF007A", marginTop: "2vw", textDecoration: "unset" }} className="text3"> Sign In </a>
+            <CallButton color={'#FFFFFF'} text={"create account"} textcolor={"#9A9A9D"} href={`/?room=${room}`} />
+            <a style={{ width: "100%", color: "#FF007A", marginTop: "2vw", textDecoration: "unset" }} className="text3"> Sign In </a>
         </div >
     )
 }

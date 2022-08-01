@@ -8,11 +8,6 @@ import '../assets/index.css'
 
 const { v4: uniqueID } = require("uuid");
 
-
-
-
-
-
 class Join extends Component {
     constructor() {
         const { room } = queryString.parse(window.location.search);

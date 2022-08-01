@@ -1,4 +1,5 @@
 #videocontrols {
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
@@ -170,7 +171,8 @@ video {
 
 #div-dropdown-copylink {
     top: -30px;
-    animation-duration: 0.5s;
+    animation: example;
+    animation-duration: 1s;
     background-color: #ECECEC;
     display: flex;
     justify-content: center;

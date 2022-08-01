@@ -249,8 +249,6 @@ const CallPage = () => {
     }
 
 
-
-
     useEffect(() => {
         createGraph("blue", "myChart2");
         createGraph("yellow", "myChart3");
@@ -314,16 +312,21 @@ const CallPage = () => {
 
     useEffect(() => {
         var dropdownTip = document.getElementById("div-dropdown-copylink");
-        dropdownTip.style.display = "block";
+        dropdownTip.style.display = "none";
 
-        // setTimeout(() => {
-        //     document.getElementById("div-dropdown-copylink").style.animation = "example";
-        // }, 1000 * 5)
+        setTimeout(() => {
+            document.dropdownTip.style.animation = "none";
+        }, 1000)
 
-        // setTimeout(() => {
-        //     document.getElementById("div-dropdown-copylink").style.animation = "fadeout 1s"
-        //     document.getElementById("div-dropdown-copylink").style.opacity = "0"
-        // }, 1000 * 20)
+        setTimeout(() => {
+            dropdownTip.style.display = "block";
+            document.dropdownTip.style.animation = "example";
+        }, 1000)
+
+        setTimeout(() => {
+            document.dropdownTip.style.animation = "fadeout 1s"
+            document.dropdownTip.style.opacity = "0"
+        }, 1000 * 20)
     }, [])
 
     var model = undefined;
@@ -507,6 +510,15 @@ const CallPage = () => {
 
                     <div id="div-EEG-graph-container">
                         <div id="div-dashboard-inner-regular-header"> EEG Readings </div>
+                        <div style={{ display: "flex", justifyContent: "center", width: "100%", marginBottom: "0.5vw", marginTop: "0.5vw" }}>
+                            <select id="select-eeg-novalue" defaultValue={"nice"} className="option-eeg">
+                                <option value="nice" id="placeholder" disabled> </option>
+                                <option value="muse"> Muse 2</option>
+                                <option value="ganglion"> Ganglion </option>
+                                <option value="synthetic"> Synthetic Device</option>
+                            </select>
+                        </div>
+
                         <div className="div-EEG-graph"> <canvas id="myChart6"></canvas> </div>
                         <div className="div-EEG-graph"> <canvas id="myChart5"></canvas> </div>
                         <div className="div-EEG-graph"> <canvas id="myChart4"></canvas> </div>

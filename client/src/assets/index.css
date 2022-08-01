@@ -7,6 +7,7 @@ body {
     background-color: #EEEEEE;
     overflow: hidden;
     margin: 0px;
+    zoom: 90%;
 }
 
 #root {
