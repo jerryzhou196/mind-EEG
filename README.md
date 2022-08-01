@@ -5,7 +5,7 @@ Find a friend to share your link with, or open two browser windows to mimic a ca
 
 
 <br>
-<i> note: person recognition activates when there are two participants in the call </i> <br>
+<i> note: COCO-ssd person recognition model activates when there are two participants in the call and the indicator light is on</i> <br>
 <i> note: audio stream is not shared due to time constraint</i>
 
 <br>
