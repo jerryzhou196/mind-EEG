@@ -1,4 +1,11 @@
 # video-eeg
+
+
+NOTE: PROJECT IS SERVED LIVE ON <a href="https://limitless-lowlands-82699.herokuapp.com/"> HEROKU</a>
+<br>
+NOTE: machine learning object recogniton only works when there are two participants in the call
+
+<br>
 At-home, video recorded EEG (V-AEEG) is a promising advancement in the assessment of Epilepsy. Effectiveness plummets however, when the video recording misses moments of interest due to patient-side errors.
 
 The gold standard at half the cost: mindEEG helps V-AEEG reach the same effectiveness as pricey in-hospital assessments by enabling live collaboration between healthcare technicians, patients and AI.  
