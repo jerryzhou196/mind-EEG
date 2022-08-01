@@ -25,10 +25,10 @@ const peerServer = ExpressPeerServer(server, {
     debug: true,
 });
 
-app.use("/peerjs", peerServer);
+app.use(path.join(__dirname, "/peerjs"), peerServer);
 app.use(cors())
 
-app.use(express.static("client/build"));
+app.use(express.static(path.join(__dirname, "client/build")));
 
 
 app.get("*", (req, res) => {
