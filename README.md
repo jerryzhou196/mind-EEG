@@ -1,7 +1,8 @@
 # video-eeg
+<strong> PROJECT IS SERVED LIVE ON <a href="https://limitless-lowlands-82699.herokuapp.com/"> HEROKU.</a> <br>
+Find a friend to share your link with, or open two browser windows to mimic a call. </strong>
 
 
-<strong> NOTE: PROJECT IS SERVED LIVE ON <a href="https://limitless-lowlands-82699.herokuapp.com/"> HEROKU.</a> Find a friend to share your link with, or open two browser windows to mimic a call. </strong>
 
 <br>
 <i> note: person recognition activates when there are two participants in the call </i> <br>
@@ -18,7 +19,7 @@ Designed with unprecedented speed and reliability, we left behind slow, insecure
 
 Our application consists of a backend and frontend. For the backend, we created an Express server in Node.js that channels users into Socket.io rooms by a unique ID in their URL. This unique ID, also known as an invite link, allows a patient to join the same room as their doctor, provided the doctor sends the invite link to the patient. Once in the same room, we use WebRTC, Socket.io and Peer.js to coordinate a connection between each caller that continuously sends respectives video streams to each other. For the frontend, we use React for the UI. We use Chart.js to visualize the EEG channels and a simple sine-wave generator for the synthetic EEG. To create the image recognition tracker, we use Tensorflow’s COCO-ssd’s image recognition library.
 
+![image](https://user-images.githubusercontent.com/46613983/182173582-862cd7a3-5f07-4358-b3d1-19b9eb4adce2.png)
 ![image](https://user-images.githubusercontent.com/46613983/182172134-9fbc2065-50c3-46b5-836a-30fe795a3a8a.png)
 ![image](https://user-images.githubusercontent.com/46613983/182172253-8f2e65ea-cd20-4148-96b6-681490be9c23.png)
-![image](https://user-images.githubusercontent.com/46613983/182173582-862cd7a3-5f07-4358-b3d1-19b9eb4adce2.png)
 
