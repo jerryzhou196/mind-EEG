@@ -8,6 +8,10 @@ import '../assets/index.css'
 import { Peer } from "peerjs";
 import { io } from 'socket.io-client'
 
+import * as  datastreams from 'datastreams-api'
+import ganglion from "@brainsatplay/ganglion"
+import muse from "@brainsatplay/muse"
+
 import queryString from 'query-string';
 
 
@@ -72,6 +76,10 @@ Chart.register(
 require('@tensorflow/tfjs-backend-cpu');
 require('@tensorflow/tfjs-backend-webgl');
 const cocoSsd = require('@tensorflow-models/coco-ssd');
+
+const dataDevices = new datastreams.DataDevices()
+dataDevices.load(ganglion)
+dataDevices.load(muse)
 
 // function EEGGraph() {
 //     var arrayLength = 30;
@@ -250,11 +258,15 @@ const CallPage = () => {
 
 
     useEffect(() => {
+        createGraph("red", "myChart1");
         createGraph("blue", "myChart2");
         createGraph("yellow", "myChart3");
         createGraph("purple", "myChart4");
         createGraph("green", "myChart5");
         createGraph("brown", "myChart6");
+
+
+
 
         const peer = new Peer();
         const socket = io();
@@ -470,6 +482,16 @@ const CallPage = () => {
     }
 
 
+    function handleChange(e) {
+        console.log(e.target.value);
+        dataDevices.getUserDevice({
+            label: e.target.value, // declare which device you want to connect to (e.g. 'device', 'ganglion', 'muse')
+        }).then(device => {
+            console.log("success");
+        })
+    }
+
+
 
 
     return (
@@ -511,19 +533,23 @@ const CallPage = () => {
                     <div id="div-EEG-graph-container">
                         <div id="div-dashboard-inner-regular-header"> EEG Readings </div>
                         <div style={{ display: "flex", justifyContent: "center", width: "100%", marginBottom: "0.5vw", marginTop: "0.5vw" }}>
-                            <select id="select-eeg-novalue" defaultValue={"nice"} className="option-eeg">
-                                <option value="nice" id="placeholder" disabled> </option>
+                            <select id="select-eeg-novalue" defaultValue={"synthetic"} className="option-eeg" onChange={(e) => {
+                                handleChange(e);
+                            }}>
                                 <option value="muse"> Muse 2</option>
                                 <option value="ganglion"> Ganglion </option>
                                 <option value="synthetic"> Synthetic Device</option>
                             </select>
                         </div>
 
+
                         <div className="div-EEG-graph"> <canvas id="myChart6"></canvas> </div>
                         <div className="div-EEG-graph"> <canvas id="myChart5"></canvas> </div>
                         <div className="div-EEG-graph"> <canvas id="myChart4"></canvas> </div>
                         <div className="div-EEG-graph"> <canvas id="myChart3"></canvas> </div>
                         <div className="div-EEG-graph"> <canvas id="myChart2"></canvas> </div>
+                        <div className="div-EEG-graph"> <canvas id="myChart1"></canvas> </div>
+
                     </div>
 
 

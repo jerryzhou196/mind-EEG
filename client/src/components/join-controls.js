@@ -89,10 +89,9 @@ function JoinControls() {
                 <option value="muse"> Muse 2</option>
                 <option value="ganglion"> Ganglion </option>
                 <option value="synthetic"> Synthetic Device</option>
-
             </select>
-            <CallButton color={'#FF007A'} text={"let's call"} textcolor={"#D1D0C5"} href={`/callpage?room=${room}`} />
-            <CallButton color={'#FFFFFF'} text={"create account"} textcolor={"#9A9A9D"} href={`/?room=${room}`} />
+            <CallButton color={'#FF007A'} text={"let's call"} textcolor={"#D1D0C5"} href={window.location.origin + `/callpage?room=${room}`} />
+            <CallButton color={'#FFFFFF'} text={"create account"} textcolor={"#9A9A9D"} href={window.location.origin + `/?room=${room}`} />
             <a style={{ width: "100%", color: "#FF007A", marginTop: "2vw", textDecoration: "unset" }} className="text3"> Sign In </a>
         </div >
     )
