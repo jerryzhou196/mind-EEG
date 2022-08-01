@@ -1,0 +1,58 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@brainsatplay/device": "^0.0.3",
+    "@brainsatplay/ganglion": "^0.0.2",
+    "@brainsatplay/muse": "^0.0.1",
+    "@tensorflow-models/coco-ssd": "^2.2.2",
+    "@tensorflow/tfjs": "^3.19.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.2.0",
+    "chart.js": "^3.8.2",
+    "datastreams-api": "^0.0.18",
+    "i": "^0.3.7",
+    "npm": "^8.15.1",
+    "peerjs-client": "^0.3.15",
+    "plotly.js": "^1.47.4",
+    "plotly.js-dist": "^2.13.3",
+    "query-string": "^7.1.1",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.0",
+    "react-bootstrap": "^2.4.0",
+    "react-dom": "^18.2.0",
+    "react-plotly.js": "^2.5.1",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "socket.io-client": "^4.5.1",
+    "uuid": "^8.3.2",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

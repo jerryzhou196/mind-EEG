@@ -1,0 +1,245 @@
+#videocontrols {
+    display: flex;
+    justify-content: center;
+}
+
+#microphone {
+    cursor: pointer;
+}
+
+
+#novideo-reflection {
+    animation: fadein 1s;
+}
+
+#div-dashboard-inner-regular-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-family: SF-pro-regular;
+    font-size: 2vw;
+    color: #948A8A;
+}
+
+.status-light-green {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.div-EEG-graph {
+    margin: 15px;
+    max-height: 100px;
+}
+
+.status-text-big {
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    font-family: SF-pro-regular;
+    font-size: 2vw;
+    margin-top: 20px;
+    color: #948A8A;
+}
+
+video {
+    border-radius: 5px;
+    background-color: black;
+}
+
+
+
+.videoView p,
+.classifyOnClick p {
+    position: absolute;
+    padding: 5px;
+    background-color: rgba(255, 111, 0, 0.85);
+    color: #FFF;
+    border: 1px dashed rgba(255, 255, 255, 0.7);
+    z-index: 2;
+    font-size: 12px;
+    margin: 0;
+}
+
+.highlighter {
+    background: rgba(0, 255, 0, 0.25);
+    border: 1px dashed #fff;
+    z-index: 1;
+    position: absolute;
+}
+
+.classifyOnClick {
+    z-index: 0;
+}
+
+.classifyOnClick img {
+    width: 100%;
+}
+
+.status-text-small {
+    text-align: center;
+    width: 250px;
+    height: fit-content;
+    text-align: left;
+    font-family: SF-pro-bold;
+    font-size: 15px;
+    color: #948A8A;
+}
+
+.div-status-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#div-EEG-person-detector {
+    width: 41%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    height: 25%;
+    background-color: #ECECEC;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#div-model-processing {
+    width: 50%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: inherit;
+    height: 25%;
+    background-color: #ECECEC;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#activate-image-button {
+    font-family: SF-pro-regular;
+    font-size: 1vw;
+    cursor: pointer;
+    width: 40%;
+    border-radius: 10px;
+    height: fit-content;
+    color: #948A8A;
+}
+
+#iv-EEG-person-detector-text {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-family: SF-pro-regular;
+    font-size: 2vw;
+    color: #948A8A;
+}
+
+#div-EEG-graph-container {
+    width: 100%;
+    height: 98.4%;
+    margin: 10px;
+    background-color: #ECECEC;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#webcam {
+    max-width: 700px;
+}
+
+.videocontrol-button {
+    background-color: #636669;
+    border-style: none;
+    width: 40px;
+    height: 40px;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#div-dropdown-copylink {
+    top: -30px;
+    animation-duration: 0.5s;
+    background-color: #ECECEC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF007A;
+
+}
+
+#span-dropdown-copylink {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: SF-pro-bold;
+    font-size: min(10px, 1vw);
+    color: white;
+}
+
+#div-dropdown-copylink-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 15px;
+    background-color: #ECECEC;
+}
+
+#div-dropdown-copylink-button:hover {
+    background-color: #74E18C;
+    cursor: pointer;
+}
+
+
+
+@keyframes example {
+    from {
+        top: -50px
+    }
+
+    to {
+        top: 20px
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.eeg {
+    width: 100%;
+    height: fit-content;
+}

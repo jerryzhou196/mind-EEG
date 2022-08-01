@@ -1,0 +1,30 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #EEEEEE;
+    overflow: hidden;
+    margin: 0px;
+}
+
+#root {
+    height: 100%;
+}
+
+@font-face {
+    font-family: SF-mono;
+    src: url("SF-Mono-Bold.otf");
+}
+
+@font-face {
+    font-family: SF-pro-regular;
+    src: url("SF-Pro-Text-Regular.otf")
+}
+
+
+@font-face {
+    font-family: SF-pro-bold;
+    src: url("SF-Pro-Text-Bold.otf")
+}
