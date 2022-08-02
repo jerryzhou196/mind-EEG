@@ -456,12 +456,11 @@ const CallPage = () => {
 
     function enableCam() {
         if (!model) {
-            console.log("model is not yet ready");
+            alert("model is not ready. please wait.")
             return;
         }
 
 
-        console.log("hello");
         // getUsermedia parameters.
         const constraints = {
             video: true
@@ -503,7 +502,7 @@ const CallPage = () => {
                             </div>
                             <span style={{ fontSize: "10px", fontFamily: "SF-pro-regular", textAlign: "center", width: "100%", margin: "2vw" }}>
                                 NOTE: Activate Image Tracker button can only be pressed <br>
-                                </br> after Model is finished processing</span>
+                                </br> after Model is finished processing and another person is in your call.</span>
                             <button id="activate-image-button" onClick={enableCam} style={{ margin: "2vw" }}> Activate Image Tracker</button>
                         </div>
 
