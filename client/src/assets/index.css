@@ -5,9 +5,8 @@ html {
 body {
     height: 100%;
     background-color: #EEEEEE;
-    overflow: hidden;
     margin: 0px;
-    zoom: 75%;
+    zoom: 83%;
 }
 
 #root {
