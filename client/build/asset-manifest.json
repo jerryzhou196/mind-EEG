@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7d0c03a7.css",
+    "main.js": "/static/js/main.e8af6276.js",
+    "static/media/SF-Pro-Text-Bold.otf": "/static/media/SF-Pro-Text-Bold.950543df4bf6d32b393b.otf",
+    "static/media/SF-Pro-Text-Regular.otf": "/static/media/SF-Pro-Text-Regular.b32e0fc150cc91382e36.otf",
+    "static/media/logo.png": "/static/media/logo.1f32f06bfa722a3c1322.png",
+    "static/media/SF-Mono-Bold.otf": "/static/media/SF-Mono-Bold.f44245f9ed4b75e45de0.otf",
+    "static/media/ezgif.com-gif-maker (3).gif": "/static/media/ezgif.com-gif-maker (3).5da3f3295667cec1b0a2.gif",
+    "static/media/microphone.svg": "/static/media/microphone.2416fd8fabd16d7c8d4fb17c7e7f5797.svg",
+    "static/media/chatbubble.svg": "/static/media/chatbubble.30981864062f37371ac833359140473e.svg",
+    "static/media/brokenheart.svg": "/static/media/brokenheart.4a09c68213e3239de2c5f8701c418e4e.svg",
+    "index.html": "/index.html",
+    "main.7d0c03a7.css.map": "/static/css/main.7d0c03a7.css.map",
+    "main.e8af6276.js.map": "/static/js/main.e8af6276.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d0c03a7.css",
+    "static/js/main.e8af6276.js"
+  ]
+}
