@@ -1,6 +1,4 @@
-# mind-EEG 
-PROJECT IS SERVED LIVE ON <a href="https://limitless-lowlands-82699.herokuapp.com/"> HEROKU.</a> <br>
-<strong> Find a friend to share your link with, or open two browser windows to mimic a call. </strong>
+<h2> mind-EEG - a blazing fast <a href="https://limitless-lowlands-82699.herokuapp.com/"> P2P telemedicine platform </a> for epilepsy diagnosis. </h2>
 
 ![image](https://user-images.githubusercontent.com/46613983/182173582-862cd7a3-5f07-4358-b3d1-19b9eb4adce2.png)
 ![image](https://user-images.githubusercontent.com/46613983/182172134-9fbc2065-50c3-46b5-836a-30fe795a3a8a.png)
