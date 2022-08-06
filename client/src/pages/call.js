@@ -1,3 +1,7 @@
+import { VideoPlayer } from './../components/video-player';
+import { EEGGraphs } from './../components/EEG-graphs';
+import { PersonDetector } from './../components/person-detector';
+import { ModelControls } from './../components/model-controls';
 import React, { useEffect, useState } from "react";
 import microphone from "../assets/microphone.svg"
 import bheart from "../assets/brokenheart.svg"
@@ -487,107 +491,15 @@ const CallPage = () => {
 
     return (
         <React.Fragment>
-
             <div id="div-dashboard-regular" style={{ height: "100%", display: 'flex' }}>
                 <div id="div-dashboard-inner-regular-left" style={{ width: "60%", height: "100%", display: "flex", backgroundColor: "white", flexFlow: "wrap", justifyContent: "center" }}>
-
-
                     <div style={{ display: "flex", width: "100%", height: "50%", margin: "10px", justifyContent: "space-between" }}>
-
-                        <div id="div-model-processing" style={{ width: "50%", height: "100%", alignContent: "center", zoom: "120%" }}>
-                            <div className="status-text-big" id="big" style={{ margin: "2vw" }}> Object Tracking </div>
-                            <div className="div-status-container" style={{ width: "100%", height: "fit-content", margin: "2vw" }}>
-                                <div id="div-status-model" className="status-text-small" > Model Processing Status:  </div>
-                                <div id="modelprocessingstatus" className="status-light-green"></div>
-                            </div>
-                            <span style={{ fontSize: "10px", fontFamily: "SF-pro-regular", textAlign: "center", width: "100%", margin: "2vw" }}>
-                                NOTE: Activate Image Tracker button can only be pressed <br>
-                                </br> after Model is finished processing and another person is in your call.</span>
-                            <button id="activate-image-button" onClick={enableCam} style={{ margin: "2vw" }}> Activate Image Tracker</button>
-                        </div>
-
-
-
-                        <div id="div-EEG-person-detector" style={{ width: "50%", height: "100%", alignContent: "center" }}>
-                            <div className="status-text-big" id="big" style={{ margin: "2vw", fontSize: "2.4vw" }}> Person Tracking </div>
-
-                            <div className="div-status-container" style={{ width: "100%", margin: "4vw" }}>
-                                <div id="div-status-person" className="status-text-small"> Person Detected in Camera:  </div>
-                                <div id="personDetected" className="status-light-green"></div>
-                            </div>
-
-                            <div className="div-status-container" style={{ width: "100%", margin: "4vw" }}>
-                                <div id="div-status-person" className="status-text-small" > Lighting Conditions:  </div>
-                                <div className="status-light-green"></div>
-
-                            </div>
-                        </div>
-
+                        <ModelControls enableCam={enableCam} />
+                        <PersonDetector />
                     </div>
-
-
-
-
-                    <div id="div-EEG-graph-container" style={{ height: "44%", width: "100%" }}>
-                        <div id="div-dashboard-inner-regular-header"> EEG Readings </div>
-                        <div style={{ display: "flex", justifyContent: "center", width: "100%", marginBottom: "0.5vw", marginTop: "0.5vw" }}>
-                            <select id="select-eeg-novalue" defaultValue={"synthetic"} className="option-eeg" onChange={(e) => {
-                                handleChange(e);
-                            }}>
-                                <option value="muse"> Muse 2</option>
-                                <option value="ganglion"> Ganglion </option>
-                                <option value="synthetic"> Synthetic Device</option>
-                            </select>
-                        </div>
-
-
-                        <div className="div-EEG-graph"> <canvas id="myChart6"></canvas> </div>
-                        <div className="div-EEG-graph"> <canvas id="myChart5"></canvas> </div>
-                        <div className="div-EEG-graph"> <canvas id="myChart4"></canvas> </div>
-                        <div className="div-EEG-graph"> <canvas id="myChart3"></canvas> </div>
-                        <div className="div-EEG-graph"> <canvas id="myChart2"></canvas> </div>
-                        <div className="div-EEG-graph"> <canvas id="myChart1"></canvas> </div>
-
-                    </div>
-
-
-
+                    <EEGGraphs />
                 </div>
-
-                <div id="div-dashboard-inner-regular-right" style={{ width: '40%', height: "100%", display: "flex", justifyContent: "center", backgroundColor: "#303030", flexFlow: "wrap" }}>
-                    <div id="div-dropdown-copylink" style={{ width: "35vw", height: "50px", display: "none", borderRadius: "5px", position: "fixed", top: "20px" }}>
-                        <div id="span-dropdown-copylink"> Press Here to Copy Join Link: <div id="div-dropdown-copylink-button" onClick={() => {
-                            navigator.clipboard.writeText(`${host}/callpage?room=${room_id}`);
-                        }}> COPY </div>  </div>
-                    </div>
-
-
-
-
-                    <div style={{ width: '100%', display: 'flex', justifyContent: "flex-end", alignItems: 'flex-end' }} id="div-video-reflection">
-                        <video style={{ width: '190px', height: "190px", borderRadius: "5px", objectFit: 'cover', backgroundColor: "black" }} id="novideo-reflection" />
-                    </div>
-                    <div style={{ width: '95%', height: 'fit-content', display: 'flex', alignItems: 'center', flexFlow: "wrap", flexDirection: "row-reverse", marginTop: "70px" }} id="div-video-regular">
-                        <div id="object-detector-wrapper" style={{ width: "100%", display: "flex", justifyContent: "center", marginBottom: "20px" }}>
-                            <div id="liveView" className="videoView">
-                                <video id="webcam" autoPlay style={{ width: "100%" }}></video>
-                            </div>
-                        </div>
-                        {/* <video style={{ width: '100%', marginBottom: '150px', backgroundColor: "black", objectFit: "cover" }} id="novideo-patient" /> */}
-                    </div>
-
-                    <div id="videocontrols" style={{ zoom: "120%" }} >
-                        <button id="microphone" className="videocontrol-button" onClick={mute}>
-                            <img style={{ width: "15px", marginTop: "3px" }} src={microphone} />
-                        </button>
-                        <button id="chat" className="videocontrol-button">
-                            <img style={{ width: "20px", marginTop: "3px" }} src={bheart} />
-                        </button>
-                        <button style={{ backgroundColor: "#FF007A" }} className="videocontrol-button">
-                            <img style={{ width: "20px", marginTop: "5px" }} src={chatbubble} />
-                        </button>
-                    </div>
-                </div>
+                <VideoPlayer host={host} room_id={room_id} mute={mute} microphone={microphone} bheart={bheart} chatbubble={chatbubble} />
             </div >
         </React.Fragment >
 
