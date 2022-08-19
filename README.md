@@ -1,5 +1,11 @@
 <h3> 💕 a decentralized, blazing-fast <a href="https://limitless-lowlands-82699.herokuapp.com/" target="_blank"> P2P telemedicine platform </a> for at-home epilepsy diagnosis. </h3>
 note: heroku app may fall sleep due to inactivity. takes ~20 seconds to start up again
+<br>
+<br>
+<br>
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/46613983/185560719-17a3fae2-f6cc-4b29-a6c9-88b7df95c21f.gif"> </img>
+</p>
 
 ![image](https://user-images.githubusercontent.com/46613983/182173582-862cd7a3-5f07-4358-b3d1-19b9eb4adce2.png)
 ![image](https://user-images.githubusercontent.com/46613983/182172134-9fbc2065-50c3-46b5-836a-30fe795a3a8a.png)
