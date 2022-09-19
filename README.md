@@ -1,4 +1,6 @@
 <h3> 💕 a decentralized, blazing-fast <a href="https://limitless-lowlands-82699.herokuapp.com/" target="_blank"> P2P telemedicine platform </a> for at-home epilepsy diagnosis. </h3>
+
+App is hosted on Heroku and is fully functioning. Open it up, and share a link to your friend to experience low latency P2P streaming!
 note: heroku app may fall sleep due to inactivity. takes ~20 seconds to start up again
 <br>
 <br>
